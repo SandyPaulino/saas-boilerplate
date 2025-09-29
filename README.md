@@ -10,6 +10,7 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
 ## ✨ Features
 
 ### 🔐 **Authentication & Security**
+
 - JWT-based authentication
 - Email verification with secure tokens
 - Password hashing with bcrypt
@@ -18,6 +19,7 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
 - CORS protection
 
 ### 🎨 **Frontend**
+
 - React 18 with React Router
 - Tailwind CSS for styling
 - Responsive design
@@ -26,6 +28,7 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
 - Loading states and error handling
 
 ### 🏗️ **Backend**
+
 - Express.js REST API
 - MySQL database with connection pooling
 - Input validation with express-validator
@@ -34,6 +37,7 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
 - Health check endpoints
 
 ### 📧 **Email System**
+
 - Email verification flow
 - Template-based emails
 - Token-based verification
@@ -42,6 +46,7 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js (>=18.x)
 - MySQL (>=8.0)
 - npm or yarn
@@ -49,31 +54,35 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/saas-boilerplate.git
    cd saas-boilerplate
    ```
 
 2. **Install dependencies**
+
    ```bash
    # Server dependencies
    cd server && npm install
-   
+
    # Client dependencies
    cd ../client && npm install
    ```
 
 3. **Set up the database**
+
    ```bash
    # Create database
    mysql -u root -p
    CREATE DATABASE saas_boilerplate;
-   
+
    # Run migrations
    mysql -u root -p saas_boilerplate < server/migrations/init.sql
    ```
 
 4. **Configure environment variables**
+
    ```bash
    # Create server/.env file
    PORT=5000
@@ -89,10 +98,11 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
    ```
 
 5. **Start the application**
+
    ```bash
    # Terminal 1 - Backend
    cd server && npm start
-   
+
    # Terminal 2 - Frontend
    cd client && npm start
    ```
@@ -105,11 +115,13 @@ A complete, production-ready SaaS boilerplate built with **MySQL**, **Express**,
 ## 🧪 Testing
 
 ### Test Users (After Database Setup)
+
 - **Email:** `test@example.com`
 - **Password:** `password123`
 - **Status:** ✅ Pre-verified
 
 ### Email Verification
+
 1. Register a new user
 2. Check server console for verification URL
 3. Copy URL to browser to complete verification
@@ -143,12 +155,14 @@ saas-boilerplate/
 ### Available Scripts
 
 **Server:**
+
 ```bash
 npm start          # Start production server
 npm run dev        # Start with nodemon
 ```
 
 **Client:**
+
 ```bash
 npm start          # Start development server
 npm run build      # Build for production
@@ -158,6 +172,7 @@ npm test           # Run tests
 ### Database Schema
 
 The application includes the following tables:
+
 - `users` - User accounts with verification status
 - `tenants` - Multi-tenant organization data
 - `features` - Tenant-specific features
@@ -168,6 +183,7 @@ The application includes the following tables:
 ### Environment Variables
 
 **Server (.env):**
+
 ```env
 PORT=5000
 DB_HOST=localhost
@@ -182,6 +198,7 @@ EMAIL_FROM=your_email@gmail.com
 ```
 
 **Client:**
+
 ```env
 REACT_APP_API_URL=http://localhost:5000/api
 ```
@@ -191,21 +208,24 @@ REACT_APP_API_URL=http://localhost:5000/api
 ### Production Setup
 
 1. **Environment Configuration**
+
    - Set `NODE_ENV=production`
    - Configure production database
    - Set up email service (SendGrid, AWS SES)
    - Configure CORS for production domain
 
 2. **Database Setup**
+
    ```bash
    mysql -u root -p < server/migrations/init.sql
    ```
 
 3. **Build and Deploy**
+
    ```bash
    # Build client
    cd client && npm run build
-   
+
    # Start server
    cd server && npm start
    ```
